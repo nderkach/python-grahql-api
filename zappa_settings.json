@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "app_function": "server.app",
+        "aws_region": "us-west-1",
+        "profile_name": "default",
+        "project_name": "airbnb-graphql",
+        "runtime": "python3.6",
+        "s3_bucket": "zappa-eacgqshn8"
+        "environment_variables": {
+            "AIRBNB_LOGIN": "airbnb@sharklasers.com",
+	    "AIRBNB_PASSWORD": "qwerty1234"
+        }
+    }
+}
