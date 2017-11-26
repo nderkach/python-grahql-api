@@ -1,7 +1,9 @@
 from graphene import ObjectType, String, Boolean, ID, List, Field, Int
 from airbnb import Api
-import json, os
+import json
+import os
 from collections import namedtuple
+
 
 def _json_object_hook(d):
     return namedtuple('X', d.keys())(*d.values())
@@ -23,6 +25,7 @@ class User(ObjectType):
 class Listing(ObjectType):
     id = ID()
     name = String()
+
 
 class Review(ObjectType):
     author = Field(User)
