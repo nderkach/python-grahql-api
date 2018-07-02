@@ -5,10 +5,10 @@ name = "pypi"
 
 [packages]
 
-flask = "==0.12.2"
-graphene = "==2.0.1"
-flask-graphql = "==1.4.1"
-airbnb = "==2.0.11"
+flask = "*"
+graphene = ">=2.0.0"
+flask-graphql = "*"
+airbnb = "*"
 
 
 [dev-packages]
