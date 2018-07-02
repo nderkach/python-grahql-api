@@ -47,7 +47,7 @@ class Review(ObjectType):
 class Query(ObjectType):
     reviews = List(Review, id=Int(required=True))
 
-    def resolve_reviews(self, args, context, info):
-        api = Api(os.environ.get("AIRBNB_LOGIN"),
+    def resolve_reviews(self, info, id):
+        api = Api(os.environ.get("AIRBNB_LOGIN"), 
                   os.environ.get("AIRBNB_PASSWORD"))
-        return json2obj(json.dumps(api.get_reviews(args.get("id"))["reviews"]))
+        return json2obj(json.dumps(api.get_reviews(id)["reviews"]))

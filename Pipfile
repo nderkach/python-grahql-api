@@ -6,8 +6,8 @@ name = "pypi"
 [packages]
 
 flask = "*"
-graphene = "*"
-"flask-graphql" = "*"
+graphene = ">=2.0.0"
+flask-graphql = "*"
 airbnb = "*"
 
 

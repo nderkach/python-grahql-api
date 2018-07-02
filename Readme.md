@@ -3,11 +3,26 @@
 ## Companion article
 https://medium.com/@nderkach/how-to-build-a-graphql-wrapper-for-a-restful-api-in-python-b49767676630
 
-## Usage:
+## Usage
+### Install dependencies and start the server
 ```
-pipenv shell
-export AIRBNB_LOGIN=<your_login>
-export AIRBNB_PASSWORD=<your_password>
+# Install Dependencies and export env variables
+pipenv install
+export AIRBNB_LOGIN='replace_with_your_login'
+export AIRBNB_PASSWORD='replace_with_your_password'
+
+# Run the server
 pipenv run python server.py
 ```
 
+### Go to the /graphql url
+http://localhost:5000/graphql
+
+### Sample Query
+```json
+{
+  reviews(id:1238125) {
+    comments
+  }
+}
+```
